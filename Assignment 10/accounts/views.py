@@ -5,9 +5,8 @@ from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, LoginForm
 
 # Home page view
-@login_required
-def home(request):
-	return render(request, 'home.html')
+
+# Remove or update the old home view if not needed
 
 # Registration view
 def register(request):
@@ -30,7 +29,7 @@ def user_login(request):
 			user = authenticate(request, username=username, password=password)
 			if user is not None:
 				login(request, user)
-				return redirect('home')
+				return redirect('/')  # Redirect to blog home
 			else:
 				form.add_error(None, 'Invalid username or password')
 	else:
