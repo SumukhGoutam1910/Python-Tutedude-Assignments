@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Details{% endblock %}
+{% block content %}
+<h2>Registration Details</h2>
+<ul class="list-group">
+  <li class="list-group-item"><strong>Name:</strong> {{ name }}</li>
+  <li class="list-group-item"><strong>Email:</strong> {{ email }}</li>
+  <li class="list-group-item"><strong>City:</strong> {{ city }}</li>
+  <li class="list-group-item"><strong>Phone Number:</strong> {{ phone }}</li>
+</ul>
+<a href="/" class="btn btn-secondary mt-3">Back to Register</a>
+{% endblock %}
